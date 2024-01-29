@@ -1,1 +1,4 @@
-Hello I haven't started coding yet
+#empty array
+GL = []
+#I don't really have any code done since what i've tried hasn't worked but I figured out exactly what I am going to go for. Currently i want to make it so that simply typing a name will add it to the list or remove it if it is already on it but i can't figure out how to change array's using user input so i'm going to look back at examples and prioritize making it add things to the array first
+user_input = input("Enter an item to add or remove")
