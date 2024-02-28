@@ -13,3 +13,7 @@ GL.append(1)
 #Example code I found to attempt to figure out how inputs work, It assigns what you typed as some named thing which I know I can print but I need to find how to add the input given to an array
 username = input("Enter username:")
 print("Username is: " + username)
+#This code allows an array to be changed although only once and can't add arrays so I need to fix it
+GL = [0]
+GL = int(input("Enter a number: ")) 
+print((GL))
