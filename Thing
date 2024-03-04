@@ -1,7 +1,7 @@
 #FIRST PROTOTYPE WOOOOAH
 GL = []
 while True:
-    user_input = input("Please add or remove an item from the list (or type 'done' to finish): ")
+    user_input = input("Please add or remove an item from the list (or type 'done' to exit): ")
     if user_input.lower() == 'done':
         break
     elif user_input.lower().startswith('add '):
