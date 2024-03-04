@@ -1,3 +1,14 @@
-#empty array
+#FIRST PROTOTYPE WOOOOAH
 GL = []
-user_input = input("Enter an item to add or remove")
+while True:
+    user_input = input("Please add or remove an item from the list (or type 'done' to finish): ")
+    if user_input.lower() == 'done':
+        break
+    elif user_input.lower().startswith('add '):
+        element_to_add = user_input[4:]  
+        GL.append(element_to_add)
+    elif user_input.lower() == 'print':
+        print(GL)
+    elif user_input.lower().startswith ('remove '):
+        element_to_remove = (user_input[7:])
+        GL.remove(element_to_remove)
