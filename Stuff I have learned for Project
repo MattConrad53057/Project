@@ -17,3 +17,10 @@ print("Username is: " + username)
 GL = [0]
 GL = int(input("Enter a number: ")) 
 print((GL))
+#Just put (user_input) after something I can't believe i never figured that out until now
+GL.append(user_input)
+#elif comes after an if
+#break breaks a loop
+#pop is only for numbers so this is better
+GL.remove
+#when userinput[number:] the number is how many digits are in the startswith like add would be 4 counting the space
