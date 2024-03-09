@@ -16,10 +16,10 @@ while True:
          GL.remove(element_to_remove)
         else:
             print("item not found")
-    elif user_input.lower().startswith ('add multiple '):
+    elif user_input.lower().startswith ('add_multiple '):
         elements_to_add = user_input[13:].split()
         GL.extend(elements_to_add)
-    elif user_input.lower().startswith ('remove multiple '):
+    elif user_input.lower().startswith ('remove_multiple '):
         items_to_remove = user_input[16:].split()
         for item in items_to_remove:
             if item in GL:
