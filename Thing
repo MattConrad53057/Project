@@ -1,4 +1,4 @@
-#FIRST PROTOTYPE WOOOOAH
+#A way more polished and refined version with two new features
 GL = []
 while True:
     user_input = input("Please add or remove an item from the list (or type 'done' to exit): ")
@@ -8,7 +8,21 @@ while True:
         element_to_add = user_input[4:]  
         GL.append(element_to_add)
     elif user_input.lower() == 'print':
+        GL.sort()
         print(GL)
     elif user_input.lower().startswith ('remove '):
         element_to_remove = (user_input[7:])
-        GL.remove(element_to_remove)
+        if element_to_remove in GL:
+         GL.remove(element_to_remove)
+        else:
+            print("item not found")
+    elif user_input.lower().startswith ('add multiple '):
+        elements_to_add = user_input[13:].split()
+        GL.extend(elements_to_add)
+    elif user_input.lower().startswith ('remove multiple '):
+        items_to_remove = user_input[16:].split()
+        for item in items_to_remove:
+            if item in GL:
+                GL.remove(item)
+            else:
+                 print("item not found")
