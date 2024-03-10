@@ -1,8 +1,10 @@
-#I technically finished I have no clue why I keep adding stuff
+#I think I have done all I can do
 GL = []
-print("Please add or remove an item from the list (or type 'done' to exit): ")
 while True:
-    user_input = input(GL)
+    if not GL:
+        print("Please add an item to the list (or type 'done' to exit): ")
+    user_input = input(GL) 
+    GL.sort()
     if user_input.lower() == 'done':
         print("Here is your final list:")     
         print(GL)
@@ -10,9 +12,6 @@ while True:
     elif user_input.lower().startswith('add '):
         element_to_add = user_input[4:]  
         GL.append(element_to_add)
-    elif user_input.lower() == 'print':
-        GL.sort()
-        print(GL)
     elif user_input.lower().startswith ('remove '):
         element_to_remove = (user_input[7:])
         if element_to_remove in GL:
