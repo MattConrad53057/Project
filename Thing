@@ -1,8 +1,11 @@
-#A way more polished and refined version with two new features
+#I technically finished I have no clue why I keep adding stuff
 GL = []
+print("Please add or remove an item from the list (or type 'done' to exit): ")
 while True:
-    user_input = input("Please add or remove an item from the list (or type 'done' to exit): ")
+    user_input = input(GL)
     if user_input.lower() == 'done':
+        print("Here is your final list:")     
+        print(GL)
         break
     elif user_input.lower().startswith('add '):
         element_to_add = user_input[4:]  
