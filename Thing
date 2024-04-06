@@ -1,9 +1,12 @@
-#I think I have done all I can do
+#Empty array functioning as a blank list
 GL = []
+#Iteration since it repeatedly runs through and checks if certain conditions are met
 while True:
+    #Selection as it sees which command the user wants to use 
     if not GL:
         print("Please add an item to the list (or type 'done' to exit): ")
     user_input = input(GL) 
+    #sequencing as it puts the list items in alphabetical order
     GL.sort()
     if user_input.lower() == 'done':
         print("Here is your final list:")     
