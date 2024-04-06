@@ -5,6 +5,7 @@ while True:
     #Selection as it sees which command the user wants to use 
     if not GL:
         print("Please add an item to the list (or type 'done' to exit): ")
+        print("-Use add to add an item, remove to remove an item, and add _multiple to the end of either to edit multiple things at once: ")
     user_input = input(GL) 
     #sequencing as it puts the list items in alphabetical order
     GL.sort()
