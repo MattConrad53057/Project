@@ -1,18 +1,19 @@
-#Empty array functioning as a blank list
+#An empty array which makes the code work.
 GL = []
-#Iteration since it repeatedly runs through and checks if certain conditions are met
-while True:
-    #Selection as it sees which command the user wants to use 
+while True: 
+    #Inputs instructions whenever the grocery list is empty
     if not GL:
         print("Please add an item to the list (or type 'done' to exit): ")
-        print("-Use add to add an item, remove to remove an item, and add _multiple to the end of either to edit multiple things at once: ")
+        print("~ Type help for instructions")
     user_input = input(GL) 
-    #sequencing as it puts the list items in alphabetical order
+    #sorts list alphabetically
     GL.sort()
+    #ends the program and leaves you with a final list
     if user_input.lower() == 'done':
         print("Here is your final list:")     
         print(GL)
         break
+   #Allows the user to add and remove things and allows the user to remove an item that doesn't exist without creating an error
     elif user_input.lower().startswith('add '):
         element_to_add = user_input[4:]  
         GL.append(element_to_add)
@@ -22,13 +23,20 @@ while True:
          GL.remove(element_to_remove)
         else:
             print("item not found")
+    #allows the users to add or remove multiple items and contains the help function
     elif user_input.lower().startswith ('add_multiple '):
         elements_to_add = user_input[13:].split()
         GL.extend(elements_to_add)
+    elif user_input.lower() == 'help':
+        print("-Use add or remove followed by a list item to edit the list.")
+        print("-You can add _multiple to add or remove to add multiple items or remove them at once.")
     elif user_input.lower().startswith ('remove_multiple '):
         items_to_remove = user_input[16:].split()
         for item in items_to_remove:
             if item in GL:
                 GL.remove(item)
-            else:
+            else: 
                  print("item not found")
+#The if and elif lines show selection
+#While true is a loop allowing the code to continuously check if the user input matches any commands
+#Most elif statements contain sequencing for example help prints two sentences in a specific order
